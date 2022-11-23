@@ -1,10 +1,16 @@
 public class CreditPaymentService {
-    public double calculate(double interestRate, double creditTerm, double creditAmount) {
-        double result1 = ((interestRate /12) 100);
-        double result2 = (((result1 + 1) * creditTerm) * result1 / ((1 + result1) * creditTerm) - 1);
-        double result3 = (result2 * creditAmount);
-        return result3;
+    double creditTerm;
+    double n = creditTerm * 12;
+
+    double interestRate;
+    double i = ((interestRate * 0.1)/12);
+
+    double creditAmount;
+    double a = creditAmount;
+
+    public double calculate(double i, double n, double a) {
+        double monthlyPayments = a * ((((1+i) * n) * i)/ (((1+i) * n) - 1));
+        return monthlyPayments;
 
     }
-
 }
