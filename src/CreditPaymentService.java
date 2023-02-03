@@ -1,9 +1,8 @@
 public class CreditPaymentService {
-    public double calculate(double interestRate, double creditTerm, double creditAmount) {
-        double result1 = (interestRate / creditTerm);
-        double result2 = (((result1 + 1) * creditTerm) * result1 / ((1 + result1) * creditTerm) - 1);
-        double result3 = (result2 * creditAmount / 10);
-        return result3;
+    public double calculate(double creditRate, double creditTerm, double amountCredit) {
+        double interestRate = creditRate / 100 / 12;
 
+        double monthlyPayments = amountCredit * (interestRate * Math.pow((1 + interestRate), creditTerm)) / (Math.pow((1 + interestRate), creditTerm) - 1);
+        return monthlyPayments;
     }
 }
