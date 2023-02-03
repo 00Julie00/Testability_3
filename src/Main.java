@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args) {
         CreditPaymentService service = new CreditPaymentService();
-        double a = 1_000_000;
-        double n = 1;
-        double i = 9.99;
-        double monthlyRate = service.calculate(i, n, a);
+        double amountCredit = 1_000_000;
+        double creditTerm = 1;
+        double creditRate = 9.99;
+        double monthlyRate = service.calculate(creditRate, creditTerm, amountCredit);
 
         System.out.println();
         System.out.println("Сумма кредита - 1 000 000 руб.\n Срок кредита - 1 год.\n Ставка - 9.99%");
