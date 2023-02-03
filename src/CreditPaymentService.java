@@ -6,5 +6,4 @@ public class CreditPaymentService {
         return result3;
 
     }
-
 }
